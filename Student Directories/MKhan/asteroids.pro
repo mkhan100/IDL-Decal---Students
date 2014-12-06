@@ -19,7 +19,7 @@ oplot, r, s
 end
 ;Once this procedure is run, the spaceship will be plotted in as a triangle.
 
-function rotation, xy, Xang=angX, Yang=angY, DEGREES=deg, ROTMAT = rotmat
+function rotation, x, y, Xang=angX, Yang=angY, DEGREES=deg, ROTMAT = rotmat
 
 ; this function rotates array of (x,y) coordinates. Order of rotations
 ; is first around Y-axis, then X-axis.
@@ -57,11 +57,11 @@ rotY = [ [ca, 0] , $
 rotX = [ [1,  0] , $
          [0, ca] ] , $
 
-rotmat = rotX # rotY ; this will give the 2 by 2 rotation matrix
-s = size(xy)
+rotmat = rotX ## rotY ; this will give the 2 by 2 rotation matrix
+s = size(x*y)
 
-if (s(0) EQ 2) AND (s(2) EQ 3) then return, xy # transpose(rotmat) $
-   else return, rotmat # xy
+if (s(0) EQ 2) AND (s(2) EQ 3) then return, x*y ## transpose(rotmat) $
+   else return, rotmat ## xy
 
 end
 

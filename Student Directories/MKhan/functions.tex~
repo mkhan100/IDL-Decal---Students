@@ -1,0 +1,29 @@
+\documentclass[12pt]{article}
+\usepackage[english]{babel}
+\usepackage{caption}
+
+\title{Tutorial 8: Functions}
+\author{Mohammad Khan}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section{The Functions of IDL and Python}
+
+\begin{table}[h!]
+  \centering
+  \begin{tabular}{| l | l |}
+    \hline
+    \textbf{IDL Functions} & \textbf{Python Counterparts} \\ \hline
+    n\_elements() & len() \\ \hline
+    intarr() & np.arange() \\ \hline
+    if x GT 1 do begin & if x \verb!>! 1: \\
+    \hspace{5 mm}print, x & \hspace{5 mm}print(x) 
+    endif & \\ \hline
+  \end{tabular}
+  \caption{The list of IDL functions with their Python counterparts} 
+\end{table}
+
+\end{document}
